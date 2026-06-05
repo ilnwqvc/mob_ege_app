@@ -1,60 +1,52 @@
-# EGE Russian App
+# Приложение для подготовки к ЕГЭ по русскому языку
 
-EGE Russian App is a Flutter application for preparing for the Russian Unified State Exam. It combines theory, practice tasks, progress tracking, and account sync in one compact study tool.
+EGE Russian App — это приложение на Flutter для подготовки к Единому государственному экзамену по русскому языку. Оно объединяет теорию, практические задания, отслеживание прогресса и синхронизацию аккаунта в одном компактном учебном инструменте.
 
-## Features
+## Возможности
 
-- Theory sections for the main EGE Russian language task types.
-- Offline practice bank split into task packages.
-- Text-input tasks in EGE-style answer format.
-- Local progress storage with Drift and SQLite.
-- Optional authorization API for syncing user progress.
-- Web-ready Flutter build with deployment files included.
+- Теоретические разделы по основным типам заданий ЕГЭ по русскому языку.
+- Офлайн-база практических заданий, разделённая на тематические пакеты.
+- Задания с вводом ответа в формате, аналогичном ЕГЭ.
+- Локальное хранение прогресса с использованием Drift и SQLite.
+- Дополнительный API авторизации для синхронизации прогресса пользователя.
+- Поддержка веб-версии Flutter с готовыми файлами для развертывания.
 
-## Tech Stack
+## Используемые технологии
 
-- Flutter and Dart
-- Provider for state management
-- GoRouter for navigation
-- Drift and SQLite for local storage
-- HTTP client for API calls
-- Python backend for authorization and progress sync
+- Flutter и Dart
+- Provider для управления состоянием
+- GoRouter для навигации
+- Drift и SQLite для локального хранения данных
+- HTTP-клиент для работы с API
+- Python-бэкенд для авторизации и синхронизации прогресса
 
-## Project Structure
+## Структура проекта
 
-- `lib/` - Flutter application source code.
-- `assets/content/` - production study content used by the app.
-- `server/` - backend API for auth and progress sync.
-- `deploy/` - deployment scripts and service configuration.
-- `web/` - Flutter web assets.
-- `test/` - automated content and app checks.
+- `lib/` — исходный код Flutter-приложения.
+- `assets/content/` — учебные материалы, используемые приложением.
+- `server/` — серверная часть для авторизации и синхронизации прогресса.
+- `deploy/` — скрипты развертывания и конфигурационные файлы.
+- `web/` — ресурсы веб-версии Flutter.
+- `test/` — автоматические проверки контента и приложения.
 
-## Getting Started
+## Быстрый старт
 
-Install Flutter, clone the repository, then run:
+Установите Flutter, клонируйте репозиторий и выполните:
 
-```bash
+bash
 flutter pub get
 flutter run
-```
 
-For web:
+Для запуска веб-версии:
 
-```bash
 flutter run -d chrome
-```
-
-## Quality Checks
-
-```bash
+Проверка качества
 flutter analyze
 flutter test
-```
+Контент
 
-## Content
+Репозиторий содержит весь необходимый учебный контент, который используется приложением при сборке. Крупные исходные документы, промежуточные импортированные данные, журналы и локальные артефакты сборки намеренно исключены из Git.
 
-The repository contains the production content required by the app at build time. Large source documents, intermediate imports, generated logs, and local build artifacts are intentionally excluded from Git.
+Развертывание
 
-## Deployment
-
-Deployment files are stored in `deploy/`. They include nginx, systemd, and helper scripts for publishing the Flutter web build and running the API service.
+Файлы для развертывания находятся в каталоге deploy/. Они включают конфигурации nginx, systemd и вспомогательные скрипты для публикации веб-версии Flutter-приложения и запуска API-сервиса.
